@@ -34,7 +34,7 @@ struct book {
 
 Following the functions created for the program:
 
-- init_book:
+- **init_book**:
 ```C
 int init_book(struct book *p_book, const char *p_id, const char *p_title, const char * p_author, struct date p_release)
 ```
@@ -43,3 +43,11 @@ This function initializes a book structure on the basis of the parameters receiv
   The function returns:
    - A value of 1 if initialization was successful.
    - A value of 0 if it failed for some reason. For example, a function will fail if it is given an invalid id of more than 9 characters. Any 9-character (or shorter) string is an acceptable id.
+
+- **add_to_collection**:
+```C
+struct book *add_to_collection(struct book *collection, unsigned int size, struct book new_book)
+```
+This function adds a new book data structure to the end of the dynamically allocated table, and if necessary, allocates more space to the table. The pointer starts at the beginning of the table in the function parameter collection, and the current table length in the size parameter. The information to add is given in the ``new_book`` parameter. It should be noted that the contents of ``new_book`` are copied to the table in the right place.
+
+The function returns the pointer to the table after insertion.
