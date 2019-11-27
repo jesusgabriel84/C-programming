@@ -40,6 +40,6 @@ int init_book(struct book *p_book, const char *p_id, const char *p_title, const 
 ```
 This function initializes a book structure on the basis of the parameters received from the ``p_book`` location. In this case, memory must be reserved for those fields in the structure that require space and that are not included in the book structure.
 
-The function returns:
-- A value of 1 if initialization was successful.
-- A value of 0 if it failed for some reason. For example, a function will fail if it is given an invalid id of more than 9 characters. Any 9-character (or shorter) string is an acceptable id.
+  The function returns:
+   - A value of 1 if initialization was successful.
+   - A value of 0 if it failed for some reason. For example, a function will fail if it is given an invalid id of more than 9 characters. Any 9-character (or shorter) string is an acceptable id.
