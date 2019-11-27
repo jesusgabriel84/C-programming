@@ -1,0 +1,46 @@
+vidas contadas: 1 ok
+vidas contadas: 3 NOK
+vidas contadas: 3 OK
+vidas contadas: 3 ok
+vidas contadas: 1 ok
+vidas contadas: 2 ok
+vidas contadas: 1 ok
+
+vidas contadas: 1 nok
+vidas contadas: 1 nok
+vidas contadas: 1 nok
+vidas contadas: 1 nok
+vidas contadas: 0 nok
+vidas contadas: 1 nok
+vidas contadas: 0 ok
+
+vidas contadas: 2 ok
+vidas contadas: 3 ok
+vidas contadas: 4 ok
+vidas contadas: 2 ok
+vidas contadas: 2 ok
+vidas contadas: 3 ok
+vidas contadas: 3 ok
+
+vidas contadas: 1 ok
+vidas contadas: 0 ok 
+vidas contadas: 2 ok
+vidas contadas: 0 ok
+vidas contadas: 3 ok
+vidas contadas: 2 ok
+vidas contadas: 2 ok
+
+vidas contadas: 1 ok
+vidas contadas: 1 ok
+vidas contadas: 2 ok
+vidas contadas: 1 ok
+vidas contadas: 3 ok
+vidas contadas: 2 ok
+vidas contadas: 3 ok
+
+
+*.***..
+.**...*
+.......
+.*.*.**
+.....*.
