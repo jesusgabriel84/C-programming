@@ -11,6 +11,6 @@ Following the codes I wrote for this repository and a brief description about th
 
 * [Game of life](src/gameoflife): Implementation of the [*Game of Life*](http://en.m.wikipedia.org/wiki/Conway%27s_Game_of_Life) by Conway, using dynamically allocated arrays to create the game area with randomly distributed organisms.
 
-* [TCP header](src/tcpheader): Practice bit-wise binary operations by implementing the TCP header structure according to the [*definition*](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure) 
+* [TCP header](src/tcpheader): Practice bit-wise binary operations by implementing the TCP header structure according to this [*definition*](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure).
 
 * [Olympics](src/olympics): This program implements a simple database which contains the registry of medals from countries which can be loaded from a file, writen to a file or entered manually and updated accordingly.
