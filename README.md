@@ -2,7 +2,7 @@
 ## C-programming
 C is an all-time programming language, which still keeps relevant even nowadays. For this reason, 
 in this repository I built small C programs to explore various topics around this language, like:
-pointers, memomy management, strings, bit-wise operations and multi-dimensional arrays.
+pointers, memory management, strings, bit-wise operations and multi-dimensional arrays.
 
 ### Code
 Following the codes I wrote for this repository and a brief description about them:
