@@ -1,0 +1,12 @@
+Bolivia;4;2;0
+Finland;3;3;3
+Turkey;3;1;0
+Cuba;2;1;2
+Peru;2;1;2
+South Africa;1;1;1
+Brazil;0;0;0
+Colombia;0;0;0
+France;0;0;0
+Russia;0;0;0
+Sweden;0;0;0
+United States of Ame;0;0;0
