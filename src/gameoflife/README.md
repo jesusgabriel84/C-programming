@@ -1,5 +1,5 @@
 <!-- Game of Life -->
-## Game of Life
+## Game of Life {#gameoflife}
 
 This program implements the classic Conway’s [*Game of Life*](http://en.m.wikipedia.org/wiki/Conway%27s_Game_of_Life) allocating and manipulating dynamic two-dimensional arrays. The Game of Life operates on a two-dimensional world, which is a grid consisting of cells that can have only two possible states: either *``dead``* or *``alive``*, in this sense, the *world* changes on every iteration by updating the state of every cell on it, and the state of a particular cell depends on its neighbors, i.e. the state of the cells surrounding it.
 
@@ -14,40 +14,102 @@ The cell's state changes according to the following rules:
 * Any **dead** cell with **exactly three live** neighbours becomes a **live** cell.
 
 
-As explained before, there is no limitation for the strings length, for this reason, this ```strings``` variable must be assigned in dynamically allocated memory. To facilitate the work with the list, the first element will always be empty, i.e. ```NULL```, and it should not be considered. Then, in the last element of the list the next pointer should be ```NULL```. As a consequence, when the list is empty, both fields are ```NULL``` in the first element.
+>Also the cells that are in the corners (i.e. diagonal cells) are neighbors, then each cell will have as a maximum of 8 neighbors
 
->This implementation pays attention to the special cases, e.g. the case of an empty list. The data structure and needed function interfaces are defined in file [``queue.h``](queue.h).
+For instance, this would be the evolution of the game area on each generation (each iteration), being the symbol ``*`` the representation of an alive cell:
 
+```bash
+Generation: 1
+*..*..***..**.....*.
+.....**.*...........
+..........*.*..**...
+...*..**..........*.
+.*.........*.*..**.*
+*.........*.........
+.........**.*.*.....
+.*....*...*.....*...
+..*...*.*...*...*...
+**..*.*....****.....
+```
+
+Ànd a following generation would be:
+
+```bash
+Generation: 2
+.....**.*...........
+.....**.**..*.......
+.....*..............
+...........**..*..*.
+.................**.
+.........**.**......
+.........**.........
+.......*..*..*.*....
+*.*...*.....*..*....
+.*...*.*...***......
+```
+
+The following ``structs`` are defined to implement the program:
+
+```C
+typedef enum {
+    DEAD,
+    ALIVE
+} CellStatus;
+
+typedef struct {
+    unsigned int x_size, y_size;
+    CellStatus **cells;
+} GameArea;
+```
 
 ### Functions
 
-The program consists of the following two functions:
+The program consists of the following functions:
 
-- **enqueue**:
+- **createGameArea**:
 ```C
-int enqueue(struct studentqueue *q, const char *name)
+GameArea *createGameArea(unsigned int x_size, unsigned int y_size)
 ```
-This function recives a string from the variable ``*name`` and add it to the last item of the list, for this reason it makes two memory allocations: one to expand the size of the data structure (```struct studentqueue```) and a second memory allocation to store the values of the string varible ``*name``.
 
-  The function returns:
-   - A value of 1 if addition was successful.
-   - A value of 0 if it failed for some reason. For example, a function will fail if there is a memory allocation problem.
+This function allocates the required memory space for the GameArea structure that will contain the game area, and for a two-dimensional array of dimensions given in parameters ``x_size`` and ``y_size``. Each cell in the area must be initialized to ``DEAD`` status, as well as the ``x_size`` and ``y_size`` areas in the structure.
 
-- **dequeue**:
+>**Note**: In this implementations the pointers to the rows (y-axis) of the game area grid are the first dimension of the array and the columns (x-axis) correspond to the second dimension. For this reason the cells are indexed as ``[y][x]``.
+
+
+- **releaseGameArea**:
 ```C
-int dequeue(struct studentqueue *q, char *buffer, unsigned int size)
+void releaseGameArea(GameArea *a)
 ```
-This function removes the first item from the queue. Take into account that before removing the item, the name stored in there should be saved to a temporary variable, which also needs to be allocated accordingly. If the element is not stored in temporary buffer, then the link list will be incomplete.
+This function releases the memory allocated by the previous function.
 
-  The function returns:
-   - A value of 1 if there was an item successfully removed from the list.
-   - A value of 0 if nothing was removed from the list.
+
+- **initGameArea**:
+```C
+void initGameArea(GameArea *a, unsigned int n)
+```
+This function turns the number of cells defined by the user as ``ALIVE`` in a random fashion.
+
+
+- **printGameArea**:
+```C
+void printGameArea(const GameArea *a)
+```
+This function outputs to ``stdout`` the current status of the game area grid:
+ - The cell with the symbol ``*`` represents an ``ALIVE`` cell.
+ - The cell with the symbol ``.`` represents a ``DEAD`` cell.
+
+
+- **gameTick**:
+```C
+void gameTick(GameArea *a)
+```
+This function advances the game area grid in one generation based on the **[rules]**(#gameoflife). The cells in the game area are evaluated all simultaneously.
 
 
 ### Running the program
 
 Execute the following:
 ```bash
-gcc -o main main.c queue.c -Wvla -Wall -g -std=c99
+gcc -o main main.c gameoflife.c -Wvla -Wall -g -std=c99
 ./main
 ```
