@@ -14,3 +14,10 @@ Following the codes I wrote for this repository and a brief description about th
 * [**TCP header**](src/tcpheader): Practice bit-wise binary operations by implementing the TCP header structure according to this [*definition*](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure).
 
 * [**Olympics**](src/olympics): This program implements a simple database which contains the registry of medals from countries which can be loaded from a file, writen to a file or entered manually and updated accordingly.
+
+### Built with
+* C 
+* Compiler version:
+```
+gcc (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+```
