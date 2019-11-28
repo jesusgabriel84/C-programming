@@ -1,5 +1,5 @@
-#ifndef AALTO_BITS_H
-#define AALTO_BITS_H
+#ifndef BITS
+#define BITS
 
 int op_bit_get(const unsigned char* data, int i);
 void op_bit_set(unsigned char* data, int i);

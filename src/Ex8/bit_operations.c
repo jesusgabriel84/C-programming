@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "bits.h"
 
 
 int op_bit_get(const unsigned char* data, int i){

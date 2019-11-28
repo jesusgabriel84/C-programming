@@ -2,8 +2,16 @@
 #include <string.h>
 #include <math.h>
 #include "tcpheader.h"
+#include "bits.h"
 
 
+
+
+
+
+
+
+/*
 int op_bit_get(const unsigned char* data, int i){
 	return (data[i/8]>>(7-i%8))&0x1;
 }
@@ -39,6 +47,8 @@ void op_print_byte(unsigned char b){
 		else printf("0");
 	}
 }
+*/
+
 
 int getSourcePort(const unsigned char *tcp_hdr){
 	int SourcePort=0;

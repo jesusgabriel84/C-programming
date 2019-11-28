@@ -4,6 +4,7 @@
 Practice the use of bit-wise operations in C by implementing the TCP protocol packet header structure according to this [*definition*](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure), where each line of the header represents a 4-byte section of the structure, i.e. 32 bits or 4 octets. The octets are counted from the left top corner, this way every field of the header is defined. For instance, if we are storing the bytes on the table ``tcp_hdr`` and we want to extract the *Window Size* field, then we should combine the elements ``tcp_hdr[14]`` and ``tcp_hdr[15]``.
 
 ![TCP header](tcpheader.png)
+(Image from Wikipedia)
 
 >**Note**: Implementations of the functions that perform the bit-wise operations are written in [``bits.c``](bits.c). While the implementation of the functions that perform the fields extraction from the TCP header are written in [``tcpheader.c``](tcpheader.c).
 

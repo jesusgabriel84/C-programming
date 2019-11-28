@@ -1,3 +1,8 @@
+#ifndef TCP_HEADER;
+#define TCP_HEADER;
+
+
+
 struct tcpHeader {
     unsigned short src_port;
     unsigned short dest_port;
@@ -26,3 +31,5 @@ int getAckFlag(const unsigned char *tcp_hdr);
 void setAckFlag(unsigned char *tcp_hdr, int flag);
 int getDataOffset(const unsigned char *tcp_hdr);
 void setDataOffset(unsigned char *tcp_hdr, int offset);
+
+#endif
