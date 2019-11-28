@@ -1,5 +1,5 @@
-<!-- Game of Life -->
-## Game of Life {#gameoflife}
+<!-- game-of-life -->
+## Game of Life
 
 This program implements the classic Conway’s [*Game of Life*](http://en.m.wikipedia.org/wiki/Conway%27s_Game_of_Life) allocating and manipulating dynamic two-dimensional arrays. The Game of Life operates on a two-dimensional world, which is a grid consisting of cells that can have only two possible states: either *``dead``* or *``alive``*, in this sense, the *world* changes on every iteration by updating the state of every cell on it, and the state of a particular cell depends on its neighbors, i.e. the state of the cells surrounding it.
 
@@ -103,7 +103,7 @@ This function outputs to ``stdout`` the current status of the game area grid:
 ```C
 void gameTick(GameArea *a)
 ```
-This function advances the game area grid in one generation based on the **[rules]**(#gameoflife). The cells in the game area are evaluated all simultaneously.
+This function advances the game area grid in one generation based on the **[rules]**(#game-of-life). The cells in the game area are evaluated all simultaneously.
 
 
 ### Running the program
