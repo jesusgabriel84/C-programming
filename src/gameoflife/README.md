@@ -103,7 +103,7 @@ This function outputs to ``stdout`` the current status of the game area grid:
 ```C
 void gameTick(GameArea *a)
 ```
-This function advances the game area grid in one generation based on the **[rules]**(#game-of-life). The cells in the game area are evaluated all simultaneously.
+This function advances the game area grid in one generation based on the [**rules**](#game-of-life). The cells in the game area are evaluated all simultaneously.
 
 
 ### Running the program
