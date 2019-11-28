@@ -17,7 +17,4 @@ Following the codes I wrote for this repository and a brief description about th
 
 ### Built with
 * C 
-* Compiler version:
-```
-gcc (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
-```
+* Compiler version: ``gcc (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0``
